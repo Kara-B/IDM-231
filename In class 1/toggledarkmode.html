@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<style>
+    /* :root {
+        --primary-color: #0d5fac;
+        --base-text-color: white;
+    } */
+        body {
+            background-color: white;
+            color: black;
+        }
+        .dark {
+            background-color: black;
+            color: white;
+        }
+    </style>
+<body>
+    <h1>Toggle Dark Mode</h1>
+   
+    <button class="js-toggle-dark"> Dark Mode </button>
+
+<script>
+// The code below is what grabs the button, or any element to make it a variable
+const buttonElement= document.querySelector('.js-toggle-dark')
+
+buttonElement.addEventListener('click', function(){
+    const bodyElement= document.querySelector('body')
+    bodyElement.classList.toggle('dark');
+
+})
+</script>
+
+
+</body>
+</html>
