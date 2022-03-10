@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Cryptid Zodiacs</title>
+    <title>Hunted Zodiacs</title>
 </head>
 
 <body>
@@ -14,31 +14,31 @@
 <main>
     <img class="BackgroundImage" src="./images/2796640.png">
 
+    <button class="help-button"> ? </button>
     <div class="content">
 
-    <div class= "ZodiacBlock">
-        <picture> 
+        <img class="js-zodiac-card zodiac-card" src="./images/Zodiac Cards/Card-Cover.png">
+        <picture class= "ZodiacBlock"> 
             <img class="magic-circle" src="./images/magicCircle.png" alt="magiccircle">
          </picture>
-    </div>
-
-    <div class="date-input">
+    
+    <div class="js-birthday-input date-input">
        <input type="date"
         id="DateEntry"
         name="Birthdate Input">
-    <button> Discover my Zodiac </button>
+    <button class="js-button"> Discover my Zodiac </button>
     </div>
  
-    
 
-    <h1>What's Hunting Your Zodiac?</h1>
+    <h1>WHAT'S HUNTING YOUR ZODIAC?</h1>
 
-    <div class="js-zodiac-bio ZodiacBio"> 
-        <p>Find out what's hunting your sign...</p>
+    <div class= "ZodiacBio"> 
+        <p class="js-zodiac-bio"> </p>
     </div>
     
     </div>
 
+    <script src="app.js"></script>
     
 </main>
 
