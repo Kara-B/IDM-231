@@ -6,10 +6,15 @@
   }
 
 * {
-margin: 0;    
-padding: 0;
-box-sizing: border-box;
+    margin: 0;    
+    padding: 0;
+    box-sizing: border-box;
 }
+/* body{
+    display: flex;
+    justify-content: center;
+} */
+
 
 .help-button{
     position: fixed;
@@ -26,7 +31,7 @@ box-sizing: border-box;
     justify-items: center;
     align-items: center;
     max-width: 100%;
-    margin: 8rem 8rem 2rem 8rem;
+   
 }
 
 h1 {
@@ -47,11 +52,10 @@ h1 {
 .ZodiacBlock{
     display: flex;
     justify-content: center;
-    max-width: 100%;
 }
 .magic-circle{
     display: flex;
-    width: 50%;
+    max-width: 50%;
 }
 
 .BackgroundImage{
