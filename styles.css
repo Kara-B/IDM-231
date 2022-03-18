@@ -10,28 +10,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body{
-    display: flex;
-    justify-content: center;
-} */
-
-
-.help-button{
-    position: fixed;
-    z-index: 500;
-    font-weight: 800;
-    font-size: 1rem;
-    top: 100;
-    right: 25%;
-}
-.content{
+main{
+    background-image: url(./images/2796640.png);
     display: grid;
-    position: relative;
-    z-index: 500;
-    justify-items: center;
+    grid-template-columns: 25% 25% 25% 10%;
+    grid-template-rows: 20% 30% 20% 30%; 
     align-items: center;
-    max-width: 100%;
-   
+    justify-items: center;
+    min-height: 90vh;
 }
 
 h1 {
@@ -41,54 +27,117 @@ h1 {
 
 }
 
-.zodiac-card{
-    display: grid;
-    justify-self: center;
-    width: 17%;
-    position: absolute;
-    top: 7%;
+.page-title{
+    max-width: 55%;
+    margin: 2rem;
+    grid-row: 1 ;
+    grid-column: 2 / span 2;
+   }
+
+.button_div {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    grid-row: 2 / span 2;
+    grid-column: 3;
+    justify-self: end;
+    
 }
 
-.ZodiacBlock{
-    display: flex;
-    justify-content: center;
+.date-input {
+    display: grid;
+    grid-row: 4;
+    grid-column: 2 /span 2;
+    margin: 1rem;
+    justify-items: center;
 }
+/* Styles for Help */
+
+.help-button{
+    border: 3px solid black;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.help-box-close{
+    display:flex;
+    justify-self: flex-end;
+}
+
+.help-box {
+    position: absolute;
+    background-color: rgb(240, 255, 255);
+    border: 5px solid black;
+    padding: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+    z-index: 800;
+    left: 17%;
+    bottom: 50%;
+}
+.help-box p {
+    font-size: 1.25rem;
+    margin: .5rem;
+}
+
+.view-deck {
+    border: 3px solid black;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
 .magic-circle{
-    display: flex;
+    display: grid;
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
     max-width: 50%;
+    margin: 1rem;
+    z-index: 2;
 }
+.zodiac-card{
+    justify-self: center;
+    align-self: center;
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+    width: 40%;
+    z-index: 500;
+}
+
+
 
 .BackgroundImage{
     width:100%;
     height: 100%;
     position: fixed;
     top:0;
+    grid: 0;
     z-index: 0;
 }
 
 .ZodiacBio{
-    display: flex;
     background-color: aliceblue;
     border: 3px solid black;
     padding: 2rem;
     font-size: 1.125rem;
+    margin: auto 2rem;
 }
 
 .full-deck{
-    display: grid;
-    position: relative;
-    z-index: 400;
-    grid-template-columns: repeat(12, 1fr);
-    margin: 1rem;
-    max-width: 100%;
+    display: none;
+    grid-template-rows: repeat(12, 1fr);
+    grid-row: 1 / span 4;
+    grid-column: 1 ;
+    flex-direction: column;
+    margin: 3rem;
+    max-width: 30%;
 }
 .full-deck img {
     width: 50%;
 }
 .full-deck img:hover{
     transition: .4s ease-in-out ;
-    /* transform: translateY(-10px); */
-    width: 60%;
+    transform: translateX(15px);
     cursor: pointer;
 }
 button {
@@ -109,6 +158,7 @@ input {
     text-align: center;
     cursor: text;
     margin: 1rem;
+    max-width: fit-content;
     font-size: 1rem;
     padding: 5px;
     border-radius: 50px;
@@ -116,7 +166,8 @@ input {
 }
 
 footer {
-    margin-top: 1em;
+    display: flex;
+    margin-top: 2rem;
     padding: 1em;
     color: white;
     background-color: rgb(4, 4, 63);
