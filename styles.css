@@ -48,9 +48,15 @@ h1 {
     display: grid;
     grid-row: 4;
     grid-column: 2 /span 2;
+    grid-template-columns: 1fr 1fr;
     margin: 1rem;
     justify-items: center;
 }
+
+.birthday-input {
+    grid-row: 2;
+}
+
 /* Styles for Help */
 
 .help-button{
@@ -121,6 +127,7 @@ h1 {
     padding: 2rem;
     font-size: 1.125rem;
     margin: auto 2rem;
+    grid-column: 1 / span 2;
 }
 
 .full-deck{
